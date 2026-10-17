@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-brand-50: #f3f1ff;
+  --color-brand-100: #e9e5ff;
+  --color-brand-200: #d4ccff;
+  --color-brand-300: #b3a3ff;
+  --color-brand-400: #8f70ff;
+  --color-brand-500: #6e41f5;
+  --color-brand-600: #5e2ee0;
+  --color-brand-700: #4f23bd;
+  --color-brand-800: #421f99;
+  --color-brand-900: #381e7c;
+  --color-ink: #0f1638; /* dark navy for text */
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+/* Native date picker icon tinted to match the inputs */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.55;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
